@@ -21,7 +21,8 @@ const carSchema = new mongoose.Schema({
     image:[{
         type:String,
         required:true,
-    }]
- })
+    }],
+},
+{timestamps: {createdAt:'createdAt',updatedAt:'updatedAt'}})
 const carModel = mongoose.model('cars',carSchema);
 module.exports = carModel;
